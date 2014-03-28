@@ -98,6 +98,9 @@ GEM
     guard-rspec (4.2.8)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
+    gumby-framework (0.0.1)
+      jquery-rails
+      modernizr-rails
     hike (1.2.3)
     hirb (0.7.1)
     hirb-unicode (0.0.5)
@@ -123,6 +126,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
+    modernizr-rails (2.7.1)
     multi_json (1.9.2)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -265,10 +269,12 @@ DEPENDENCIES
   factory_girl_rails
   faker
   guard-rspec
+  gumby-framework
   hirb
   hirb-unicode
   jbuilder (~> 1.2)
   jquery-rails
+  modernizr-rails
   pry-byebug
   pry-doc
   pry-rails

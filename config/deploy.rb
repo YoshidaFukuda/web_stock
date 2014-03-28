@@ -34,6 +34,18 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+
+set :application, "web-stock"
+set :repository,  "https://bitbucket.org:yu01/webstock.git"
+set :scm, "git"
+set :user, "ec2-user"
+set :branch, "master"
+set :deploy_via, :remote_cache
+set :deploy_to, /var/www/html
+ 
+role :web, web-stock
+
+
 namespace :deploy do
 
   desc 'Restart application'

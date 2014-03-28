@@ -1,0 +1,38 @@
+box: wercker/ubuntu12.04-ruby2.0.0
+services:
+    - wercker/postgresql
+build:
+    steps:
+  - bundle-install
+      - rails-database-yml:
+          service: postgresql
+      - script:
+          name: echo ruby information
+          code: |
+              echo "ruby version $(ruby --version) running!"
+              echo "from location $(which ruby)"
+              echo -p "gem list: $(gem list)"
+      - script:
+          name: Set up db
+          code: RAILS_ENV=test bundle exec rake db:schema:load
+      - script:
+          name: Run RSpec
+          code: bundle exec rspec
+deploy:
+    steps:
+        - heroku-deploy
+        - script:
+            name: Update database
+            code: heroku run rake db:migrate --app $APP_NAME
+deploy:
+    steps:
+        # Execute the heroku-deploy, heroku details can be edited
+        # online at http://app.wercker.com/
+        - heroku-deploy
+
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
