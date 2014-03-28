@@ -1,0 +1,39 @@
+<h1>Listing webs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Html</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Hatena</th>
+      <th>Deleted at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @webs.each do |web| %>
+      <tr>
+        <td><%= web.name %></td>
+        <td><%= web.url %></td>
+        <td><%= web.html %></td>
+        <td><%= web.facebook %></td>
+        <td><%= web.twitter %></td>
+        <td><%= web.hatena %></td>
+        <td><%= web.deleted_at %></td>
+        <td><%= link_to 'Show', web %></td>
+        <td><%= link_to 'Edit', edit_web_path(web) %></td>
+        <td><%= link_to 'Destroy', web, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Web', new_web_path %>

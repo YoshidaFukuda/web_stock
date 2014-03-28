@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @web.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @web.url %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @web.html %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @web.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @web.twitter %>
+</p>
+
+<p>
+  <strong>Hatena:</strong>
+  <%= @web.hatena %>
+</p>
+
+<p>
+  <strong>Deleted at:</strong>
+  <%= @web.deleted_at %>
+</p>
+
+<%= link_to 'Edit', edit_web_path(@web) %> |
+<%= link_to 'Back', webs_path %>
