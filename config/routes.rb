@@ -1,4 +1,5 @@
 WebStock::Application.routes.draw do
+  root to: 'webs#index'
   resources :webs
 
   # The priority is based upon order of creation: first created -> highest priority.
