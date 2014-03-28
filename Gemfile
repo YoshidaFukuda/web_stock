@@ -33,9 +33,12 @@ group :doc do
 end
 
 group :development do
-  gem 'capistrano'
   gem 'capistrano-rails'
+  gem 'capistrano', '~> 3.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv' 
 end
+
 
 group :test, :development do
   gem "pry-rails"
