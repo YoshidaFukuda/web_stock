@@ -17,15 +17,18 @@
   </div>
   <div class="field">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url,:id => "url"%>
   </div>
+
+
+
   <div class="field">
     <%= f.label :html %><br>
-    <%= f.text_area :html %>
+    <%= f.text_area :html,:id => "source" %>
   </div>
   <div class="field">
     <%= f.label :facebook %><br>
-    <%= f.number_field :facebook %>
+    <%= f.text_field :facebook,:id => "facebook" %>
   </div>
   <div class="field">
     <%= f.label :twitter %><br>
@@ -35,11 +38,29 @@
     <%= f.label :hatena %><br>
     <%= f.number_field :hatena %>
   </div>
-  <div class="field">
-    <%= f.label :deleted_at %><br>
-    <%= f.datetime_select :deleted_at %>
-  </div>
+ 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
+
+<button onclick="frame_load();">リンク先をiframeに表示する</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

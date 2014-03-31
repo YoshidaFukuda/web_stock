@@ -24,6 +24,8 @@ class WebsController < ApplicationController
   # POST /webs
   # POST /webs.json
   def create
+
+    p "ほほほh"
     @web = Web.new(web_params)
 
     respond_to do |format|

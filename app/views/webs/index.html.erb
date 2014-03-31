@@ -7,12 +7,12 @@
       <th>Url</th>
       <th>Html</th>
       <th>Facebook</th>
-      <th>Twitter</th>
+      <!--<th>Twitter</th>
       <th>Hatena</th>
       <th>Deleted at</th>
       <th></th>
       <th></th>
-      <th></th>
+      <th></th>-->
     </tr>
   </thead>
 
@@ -23,9 +23,9 @@
         <td><%= web.url %></td>
         <td><%= web.html %></td>
         <td><%= web.facebook %></td>
-        <td><%= web.twitter %></td>
-        <td><%= web.hatena %></td>
-        <td><%= web.deleted_at %></td>
+        <!--<td><%#= web.twitter %></td>
+        <td><%#= web.hatena %></td>
+        <td><%#= web.deleted_at %></td>-->
         <td><%= link_to 'Show', web %></td>
         <td><%= link_to 'Edit', edit_web_path(web) %></td>
         <td><%= link_to 'Destroy', web, method: :delete, data: { confirm: 'Are you sure?' } %></td>
