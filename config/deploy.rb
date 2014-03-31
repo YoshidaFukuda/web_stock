@@ -41,10 +41,10 @@ set :scm, "git"
 set :user, "ec2-user"
 set :branch, "master"
 set :deploy_via, :remote_cache
-set :deploy_to, /var/www/html
+set :deploy_to, "/var/www/html"
  
-role :web, web-stock
-
+#role :web, web-stock
+role :local, "localhost"
 
 namespace :deploy do
 

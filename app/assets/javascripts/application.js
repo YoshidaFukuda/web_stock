@@ -15,10 +15,9 @@
 //= require turbolinks
 //= require modernizr
 //= require gumby
+//
 //= require ui/gumby.checkbox
 //= require ui/gumby.radiobtn
-//= require ui/gumby.fittext
-//= require ui/gumby.navbar
 //= require ui/gumby.checkbox
 //= require ui/gumby.fixed
 //= require ui/gumby.radiobtn
@@ -27,4 +26,7 @@
 //= require ui/gumby.tabs
 //= require ui/gumby.toggleswitch
 //= require ui/jquery.validation
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
+

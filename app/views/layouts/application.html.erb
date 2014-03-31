@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+  <meta charset="utf-8">
   <title>WebStock</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%#= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag :modernizr %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "modernizr", "scraping" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+
+<p>いいね数 : <span id="likes"></span></p>
+
+<p>
+	<span style="font-weight:bold;">URL：</span><input type="text" id="url" style="width:70%" value="URLを入力してください">
+	<button onclick="frame_load();">リンク先をiframeに表示する</button>
+</p>
+
+<iframe id="target_frame" name="target_frame" src="" width="640px" height="800px" style="float:left;"></iframe>
+<button onclick="getSource();">リンク先のhtmlを抽出する</button>
+<!--<button onclick="result_clear();">クリア</button>-->
+
+<textarea id="source" style="width: 100%;height: 300px;"></textarea>
 
 </body>
 </html>

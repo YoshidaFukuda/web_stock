@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 gem 'gumby-framework'
 gem "modernizr-rails"
-gem "gumby-framework"
+gem "jquery-rails"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
