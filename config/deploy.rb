@@ -21,7 +21,9 @@
     
     # set :pty, true
     
-    set :linked_files, %w{config/database.yml}
+    #set :linked_files, %w{config/database.yml}
+
+    #set :linked_files, %w{config/database.yml config/resque.yml}
     #>　デプロイ先のサーバーの :deploy_to/shared/config/database.yml のシンボリックリンクを
     #  :deploy_to/current/config/database.yml にはる。
     # 先にshared以下にファイルをアップロードする必要あり
