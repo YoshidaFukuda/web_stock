@@ -17,17 +17,21 @@
     #
     
     # rbenvを使用しているので or 'capistrano/rvm'
-    require 'capistrano/rbenv'
+    #require 'capistrano/rbenv'
     
     #rbenvをシステムにインストールした or ユーザーローカルにインストールした
-    set :rbenv_type, :'ec2-user'  # :user or :system
+    set :rbenv_type, :user  # :user or :system
     # rubyのversion
-    set :rbenv_ruby, '2.1.0-rc1'
+    set :rbenv_ruby, '2.0.0p247'
     
+    set :rbenv_custom_path, '/usr/local/rbenv'
     # Rails,bundlerをデプロイするので必須
-    require 'capistrano/bundler'
+    #require 'capistrano/bundler'
     require 'capistrano/rails'
+    require 'capistrano/rails/assets'
+    require 'capistrano/rails/migrations'
     
     # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
     Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+
 

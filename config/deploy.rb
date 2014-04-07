@@ -1,14 +1,15 @@
- set :application, 'web-stock'
+    set :application, 'web-stock'
     #=> アプリケーション名
     
-    set :repo_url, 'git@bitbucket.org:yu01/web-stock.git'
+    set :repo_url, 'git@bitbucket.org:yu01/webstock.git'
+    
     #=> githubのurl。プロジェクトのgitホスティング先を指定する
     
     #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
     set :branch, 'master'
     #> デプロイするのはマスターブランチに固定
     
-    set :deploy_to, '/var/www/web-stock'
+    set :deploy_to, '/var/www/html'
     #> デプロイ先のサーバーのディレクトリ。フルパスで指定した。
     
     set :scm, :git
@@ -34,6 +35,8 @@
     
     set :keep_releases, 5
     #> 5リリース分保持しておく。
+    #
+    
     
     namespace :deploy do
     

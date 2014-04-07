@@ -25,10 +25,7 @@
 # set :output, { :standard => log_path, :error => error_log_path}
 # set :environment, :production
  
-# ## ２時間毎にツイートするRakeタスクを登録しました。
-# every 2.hours do
-#   rake "twitter:tweet"
-# end
+
 log_path = Whenever.path + '/log/cron.log'
 error_log_path = Whenever.path + '/log/cron_error.log'
 set :output, { :standard => log_path, :error => error_log_path}
@@ -37,3 +34,29 @@ set :environment, :development
 every 1.minutes do
   runner "Cron::ScrapingHtml.scraping_html"
 end
+
+every 5.minutes do
+  runner "Cron::ScrapingHtml.scraping_html"
+end
+
+every 30.minutes do
+  runner "Cron::ScrapingHtml.scraping_html"
+end
+
+every 1.hours do
+  runner "Cron::ScrapingHtml.scraping_html"
+end
+
+every 1.days do
+  runner "Cron::ScrapingHtml.scraping_html"
+end
+
+
+
+
+
+
+
+
+
+

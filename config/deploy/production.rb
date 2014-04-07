@@ -2,9 +2,9 @@ set :stage, :production
     
     
     #サーバーのロールを指定.ついでにユーザーも指定しています。
-    role :app, %w{ec2-user@54.249.12.46}
-    role :web, %w{ec2-user@54.249.12.46}
-    role :db,  %w{ec2-user@54.249.12.46}
+    role :app, %w{root@54.249.12.46}
+    role :web, %w{root@54.249.12.46}
+    role :db,  %w{root@54.249.12.46}
     
     
     # you can set custom ssh options
