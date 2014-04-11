@@ -9,7 +9,15 @@ gem 'sqlite3'
 gem 'nokogiri'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+#gem 'sass-rails', '~> 4.0.0'
+
+gem 'therubyracer'
+gem 'less-rails-bootstrap'
+
+
+
+
+
 gem 'whenever', :require => false
 gem 'therubyracer'
 
@@ -26,6 +34,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+#gem 'bootstrap-sass', '3.0.2.0'
+
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
