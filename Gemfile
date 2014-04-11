@@ -12,16 +12,11 @@ gem 'nokogiri'
 #gem 'sass-rails', '~> 4.0.0'
 
 gem 'therubyracer'
-gem 'less-rails-bootstrap'
-
-
-
-
+gem 'simple_form'
+gem 'less-rails' 
+gem 'twitter-bootstrap-rails'
 
 gem 'whenever', :require => false
-gem 'therubyracer'
-
-
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
