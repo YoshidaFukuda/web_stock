@@ -15,18 +15,28 @@
     #   https://github.com/capistrano/rails/tree/master/assets
     #   https://github.com/capistrano/rails/tree/master/migrations
     #
-    #require 'capistrano/bundler'
+    require 'capistrano/bundler'
     require 'capistrano/rails'
     require 'capistrano/rails/assets'
     require 'capistrano/rails/migrations'
+    require "whenever/capistrano"
+
+
+
+
+
+
+
+
+
 
     # rbenvを使用しているので or 'capistrano/rvm'
-    #require 'capistrano/rbenv'
+    require 'capistrano/rbenv'
     
     #rbenvをシステムにインストールした or ユーザーローカルにインストールした
     set :rbenv_type, :system  # :user or :system
     # rubyのversion
-    set :rbenv_ruby, '2.0.0p247'
+    set :rbenv_ruby, '2.1.0-rc1'
     
     set :rbenv_custom_path, '/usr/local/rbenv'
 
