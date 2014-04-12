@@ -3,6 +3,12 @@ class WebsController < ApplicationController
 
   # GET /webs
   # GET /webs.json
+  
+  def chart
+    respond_to do |format|
+      format.html
+    end
+  end
   def index
     @webs = Web.all
   end

@@ -27,3 +27,4 @@ production:
   username: root
   password: e7-WiB8f
   host: localhost
+  socket: /var/lib/mysql/mysql.sock
