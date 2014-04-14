@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scraping_web.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @scraping_web.url %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @scraping_web.html %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @scraping_web.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @scraping_web.twitter %>
+</p>
+
+<p>
+  <strong>Hatena:</strong>
+  <%= @scraping_web.hatena %>
+</p>
+
+<p>
+  <strong>Deleted at:</strong>
+  <%= @scraping_web.deleted_at %>
+</p>
+
+<p>
+  <strong>Timing:</strong>
+  <%= @scraping_web.timing %>
+</p>
+
+<%= link_to 'Edit', edit_scraping_web_path(@scraping_web) %> |
+<%= link_to 'Back', scraping_webs_path %>

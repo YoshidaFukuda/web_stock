@@ -1,4 +1,6 @@
 WebStock::Application.routes.draw do
+  resources :scraping_webs
+
   root to: 'webs#index'
   resources :webs
   get "chart", :controller => :webs, :action => :chart

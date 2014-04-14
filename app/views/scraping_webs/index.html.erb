@@ -1,0 +1,41 @@
+<h1>Listing scraping_webs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Html</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Hatena</th>
+      <th>Deleted at</th>
+      <th>Timing</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scraping_webs.each do |scraping_web| %>
+      <tr>
+        <td><%= scraping_web.name %></td>
+        <td><%= scraping_web.url %></td>
+        <td><%= scraping_web.html %></td>
+        <td><%= scraping_web.facebook %></td>
+        <td><%= scraping_web.twitter %></td>
+        <td><%= scraping_web.hatena %></td>
+        <td><%= scraping_web.deleted_at %></td>
+        <td><%= scraping_web.timing %></td>
+        <td><%= link_to 'Show', scraping_web %></td>
+        <td><%= link_to 'Edit', edit_scraping_web_path(scraping_web) %></td>
+        <td><%= link_to 'Destroy', scraping_web, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scraping web', new_scraping_web_path %>
