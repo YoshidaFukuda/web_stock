@@ -11,24 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!--   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :url %><br>
     <%= f.text_field :url,:id => "url"%>
   </div>
 
-
-
-  <div class="field">
+<!--   <div class="field">
     <%= f.label :html %><br>
     <%= f.text_area :html,:id => "source" %>
   </div>
   <div class="field">
     <%= f.label :facebook %><br>
-    <%= f.text_field :facebook,:id => "facebook" %>
+    <%= f.number_field :facebook,:id => "facebook" %>
   </div>
   <div class="field">
     <%= f.label :twitter %><br>
@@ -38,15 +36,24 @@
     <%= f.label :hatena %><br>
     <%= f.number_field :hatena %>
   </div>
+  <div class="field">
+    <%= f.label :hatena %><br>
+    <%= f.number_field :hatena %>
+  </div> -->
+  <div class="field">
+    <%= f.label :データ取得タイミング %><br>
+    <%= f.select:timing, options_for_select({"取得しない" => "0","１分" => "1", "5分" => "2", "10分" => "3", "30分" => "4", "1時間" => "5", "１日" => "6"}) %>
+  </div>
+
  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("登録", :confirm => "登録してよろしいでしょうか？") %>
   </div>
 
 
 <% end %>
 
-<button onclick="frame_load();">リンク先をiframeに表示する</button>
+<!-- <button onclick="frame_load();">リンク先をiframeに表示する</button> -->
 
 
 
