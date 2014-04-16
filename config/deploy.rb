@@ -32,11 +32,11 @@
     # 先にshared以下にファイルをアップロードする必要あり
     # 説明下記に
     
-    set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
-    #>同じくsharedに上記のディレクトリを生成し、currentにシンボリックリンクを張る
+    # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
+    # #>同じくsharedに上記のディレクトリを生成し、currentにシンボリックリンクを張る
     
     
-    # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+    # # set :default_env, { path: "/opt/ruby/bin:$PATH" }
     
     set :keep_releases, 5
     #> 5リリース分保持しておく。
