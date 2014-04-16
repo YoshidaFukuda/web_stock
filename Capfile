@@ -48,6 +48,6 @@
     Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 
 
-    +SSHKit.config.command_map[:whenever] = "bundle exec whenever"
+    SSHKit.config.command_map[:whenever] = "bundle exec whenever"
 
 
