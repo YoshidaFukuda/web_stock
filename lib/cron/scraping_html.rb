@@ -2,6 +2,7 @@
 
 #coding:utf-8
 require './app/models/web'
+require './app/models/scraping_web'
 require 'open-uri'
 require 'nokogiri'
 require 'rubygems'
@@ -15,7 +16,8 @@ class Cron::ScrapingHtml
 
   	
   	web = Web.find(:all)#,:conditions => ["timing = ?", 1])
-  	p web
+	
+  	
   	url = []
 
   	
@@ -24,7 +26,7 @@ class Cron::ScrapingHtml
 
   	
   	url.map { |e|  
-  		web_stock = Web.new
+  		web_stock = ScrapingWeb.new
 
   		
   		#html解析	
