@@ -17,6 +17,9 @@
     
     set :format, :pretty
     set :log_level, :debug # :info or :debug
+
+    set :whenever_environment, "#{fetch(:stage)}" #wheneverでの環境指定に必要
+    set :whenever_identifier, ->{ "#{fetch(:application)}
     #> ログはたくさん見れるようにしておきます。
     
     # set :pty, true
