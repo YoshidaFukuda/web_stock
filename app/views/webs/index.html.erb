@@ -1,18 +1,15 @@
-<h1>Listing webs</h1>
+<h1>一覧</h1>
+<%= link_to '新規作成', new_web_path %>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Url</th>
-      <th>Html</th>
+      <th>URL</th>
       <th>Facebook</th>
-      <!--<th>Twitter</th>
+      <th>Twitter</th>
       <th>Hatena</th>
-      <th>Deleted at</th>
-      <th></th>
-      <th></th>
-      <th></th>-->
+      <th>取得タイミング</th>
     </tr>
   </thead>
 
@@ -21,14 +18,13 @@
       <tr>
         <td><%= web.name %></td>
         <td><%= web.url %></td>
-        <!--<td><%#= web.html %></td>-->
         <td><%= web.facebook %></td>
-        <!--<td><%#= web.twitter %></td>
-        <td><%#= web.hatena %></td>
-        <td><%#= web.deleted_at %></td>-->
-        <td><%= link_to 'Show', web %></td>
-        <td><%= link_to 'Edit', edit_web_path(web) %></td>
-        <td><%= link_to 'Destroy', web, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= web.twitter %></td>
+        <td><%= web.hatena %></td>
+        <td><%= web.timing %></td>
+        <td><%= link_to '詳細', web %></td>
+        <td><%= link_to '編集', edit_web_path(web) %></td>
+        <td><%= link_to '削除', web, method: :delete, data: { confirm: '本当に削除してよろしいでしょうか？' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Web', new_web_path %>
+

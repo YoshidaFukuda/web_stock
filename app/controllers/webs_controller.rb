@@ -9,6 +9,10 @@ class WebsController < ApplicationController
       format.html
     end
   end
+  def search
+    @search = Web.all    
+  end
+
   def index
     @webs = Web.all
   end
