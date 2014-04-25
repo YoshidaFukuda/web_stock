@@ -21,15 +21,6 @@
     require 'capistrano/rails/migrations'
     require "whenever/capistrano"
 
-
-
-
-
-
-
-
-
-
     # rbenvを使用しているので or 'capistrano/rvm'
     require 'capistrano/rbenv'
     

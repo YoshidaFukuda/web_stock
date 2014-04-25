@@ -14,20 +14,12 @@ class Cron::ScrapingHtml
 
   def self.scraping_html
 
-  	
-  	web = Web.find(:all)#,:conditions => ["timing = ?", 1])
-	
-  	
+  	web = Web.find(:all)#,:conditions => ["timing = ?", 1])  	
   	url = []
-
-  	
-
   	web.map { |e| url << e.url}
 
-  	
   	url.map { |e|  
   		web_stock = ScrapingWeb.new
-
   		
   		#html解析	
   		charset = nil
@@ -38,34 +30,22 @@ class Cron::ScrapingHtml
 
 		doc = Nokogiri::HTML.parse(html, nil, charset)
 		p web_stock.name = doc.title
-		web_stock.html = html
+		web_stock.html = '' #html
 		web_stock.url = e
 		
-		
-		
-		
+				
 		fb_uri="http://graph.facebook.com/"+e
 		p web_stock.facebook =  JSON.parse(open(fb_uri).read)['shares'].to_i
 		
 		
 		hatena_uri="http://b.hatena.ne.jp/entry/jsonlite/?url="+CGI.escape(e)
-		web_stock.hatena = JSON.parse(open(hatena_uri).read)['count'].to_i
+		 #web_stock.hatena = JSON.parse(open(hatena_uri).read)['count'].to_i
 		
 		tweet_uri = "http://urls.api.twitter.com/1/urls/count.json?url="+CGI.escape(e)
 		web_stock.twitter = JSON.parse(open(tweet_uri).read)['count'].to_i
-
-
-		p web_stock.save
-
+		web_stock.save
 
 	}
-
-
-
-  	
-
-    
-
 
   end
 

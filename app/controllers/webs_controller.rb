@@ -15,6 +15,7 @@ class WebsController < ApplicationController
 
   def index
     @webs = Web.all
+    #@webs = Web.order(:created).page params[:page]
   end
 
   # GET /webs/1
@@ -35,7 +36,6 @@ class WebsController < ApplicationController
   # POST /webs.json
   def create
 
-    p "ほほほh"
     @web = Web.new(web_params)
 
     respond_to do |format|

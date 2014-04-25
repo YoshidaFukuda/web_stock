@@ -20,13 +20,13 @@
   <tbody>
     <% @scraping_webs.each do |scraping_web| %>
       <tr>
-        <td><%= scraping_web.name %></td>
+        <td><%#= scraping_web.name %></td>
         <td><%= scraping_web.url %></td>
-        <td><%= scraping_web.html %></td>
+        <td><%#= scraping_web.html %></td>
         <td><%= scraping_web.facebook %></td>
         <td><%= scraping_web.twitter %></td>
         <td><%= scraping_web.hatena %></td>
-        <td><%= scraping_web.deleted_at %></td>
+        <td><%= scraping_web.created_at %></td>
         <td><%= scraping_web.timing %></td>
         <td><%= link_to 'Show', scraping_web %></td>
         <td><%= link_to 'Edit', edit_scraping_web_path(scraping_web) %></td>

@@ -31,11 +31,11 @@ error_log_path = Whenever.path + '/log/cron_error.log'
 set :output, { :standard => log_path, :error => error_log_path}
 set :environment, :development
 
-every 1.minutes do
-  runner "Cron::ScrapingHtml.scraping_html"
-end
+# every 1.minutes do
+#   runner "Cron::ScrapingHtml.scraping_html"
+# end
 
-every 5.minutes do
+every 10.minutes do
   runner "Cron::ScrapingHtml.scraping_html"
 end
 
